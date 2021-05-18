@@ -5,10 +5,8 @@ import {
   CSidebar,
   CSidebarBrand,
   CSidebarNav,
-  CSidebarNavDivider,
   CSidebarNavTitle,
   CSidebarMinimizer,
-  CSidebarNavDropdown,
   CSidebarNavItem,
 } from '@coreui/react'
 
@@ -24,8 +22,7 @@ const TheSidebar = () => {
   return (
     <CSidebar
       show={show}
-      onShowChange={(val) => dispatch({type: 'set', sidebarShow: val })}
-    >
+      onShowChange={(val) => dispatch({type: 'set', sidebarShow: val })} >
       <CSidebarBrand className="d-md-down-none" to="/">
         <CIcon
           className="c-sidebar-brand-full"
@@ -43,8 +40,6 @@ const TheSidebar = () => {
         <CCreateElement
           items={navigation}
           components={{
-            CSidebarNavDivider,
-            CSidebarNavDropdown,
             CSidebarNavItem,
             CSidebarNavTitle
           }}
